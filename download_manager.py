@@ -49,7 +49,7 @@ def download_files_by_urls(urls_file, save_mode=False):
                 continue
 
             filename = os.path.basename(url)
-            download_times[filename] = time
+            download_times[f'{url_count}_{filename}'] = time
             print(f'{url_count}) {filename} {time}')
     return download_times
 
